@@ -4,12 +4,12 @@ cmake_minimum_required(VERSION 3.11.3)
 set(CMAKE_CXX_STANDARD 17)
 
 # Add the path of the cmake files to the CMAKE_MODULE_PATH
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake) # Adding a directory to the module path (stuff that cmake can find easily); We are adding <dirWhereTheListsFileLives>/cmake to the path, so that cmake can find the libs using the two files there
 
 project(OSM_A_star_search)
 
 # Set library output path to /lib
-set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib")
+set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib") # setting the directory where the libraries which are built throughout the build process are stored
 
 # Locate project prerequisites
 find_package(io2d REQUIRED)
